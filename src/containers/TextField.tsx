@@ -37,17 +37,25 @@ export class TextField extends React.Component<Props, State> {
     this.mount = false;
   }
 
-  onChange = (e: React.ChangeEvent<HTMLInputElement>): void => this.setState({ text: e.target.value });
-
-  onSubmit = (e: React.MouseEvent<HTMLButtonElement>): void => {
+  submitCurrentText = (): void => {
     this.props.onSubmit(this.state.text);
     this.setState({ text: '' });
+  }
+
+  onChange = (e: React.ChangeEvent<HTMLInputElement>): void => this.setState({ text: e.target.value });
+
+  onSubmit = (e: React.MouseEvent<HTMLButtonElement>): void => this.submitCurrentText();
+
+  onKeyUp = (e: React.KeyboardEvent<HTMLInputElement>): void => {
+    if (e.key === 'Enter') {
+      this.submitCurrentText();
+    }
   }
 
   render() {
     return (
       <div>
-        <input type="text" value={this.state.text} onChange={this.onChange} />
+        <input type="text" value={this.state.text} onChange={this.onChange} onKeyUp={this.onKeyUp} />
         <button type="submit" onClick={this.onSubmit}>
           Change Name
         </button>
