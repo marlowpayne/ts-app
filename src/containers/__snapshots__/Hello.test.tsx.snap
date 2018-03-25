@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello container comp -- Snapshot captures a snapshot 1`] = `
+<div>
+  <div
+    className="sc-bdVaJa jdlAAa"
+  >
+    <div
+      className="greeting"
+    >
+      Hello 
+      Test!
+    </div>
+  </div>
+  <div>
+    <input
+      onChange={[Function]}
+      onKeyUp={[Function]}
+      type="text"
+      value=""
+    />
+    <button
+      onClick={[Function]}
+      type="submit"
+    >
+      Change Name
+    </button>
+  </div>
+</div>
+`;

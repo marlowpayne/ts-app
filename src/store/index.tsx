@@ -1,11 +1,6 @@
 import { createStore } from 'redux';
-import { PersonRecord, StoreState } from '../types';
-import { reducer } from '../reducers';
+import { StoreState } from '../types';
+import { rootReducer } from '../reducers';
+import { defaultState } from './default-state';
 
-export const defaultState: StoreState = {
-  person: new PersonRecord({
-    name: 'World'
-  })
-};
-
-export const store = createStore<StoreState>(reducer, defaultState);
+export const store = createStore<StoreState>(rootReducer, defaultState);

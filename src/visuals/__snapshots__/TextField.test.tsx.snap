@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField visual comp -- Snapshot captures a snapshot 1`] = `
+<div>
+  <input
+    onChange={[Function]}
+    onKeyUp={[Function]}
+    type="text"
+    value=""
+  />
+  <button
+    onClick={[Function]}
+    type="submit"
+  >
+    Change Name
+  </button>
+</div>
+`;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, Dispatch } from 'react-redux';
 import { Hello as VisualComp } from '../visuals/Hello';
-import { TextField } from './TextField';
+import { TextField } from '../visuals/TextField';
 import { StoreState } from '../types';
 import { defaultName, updateName, Action } from '../actions';
 

@@ -12,15 +12,15 @@ interface State {
 }
 
 export class TextField extends React.Component<Props, State> {
-  mount: boolean;
-
-  propTypes = {
+  static propTypes = {
     onSubmit: PropTypes.func
   };
 
-  defaultProps = {
+  static defaultProps = {
     onSubmit: noop
   };
+
+  mount: boolean;
 
   constructor(props: Props) {
     super(props);
