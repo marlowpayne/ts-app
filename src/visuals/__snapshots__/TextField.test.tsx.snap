@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextField visual comp -- Snapshot captures a snapshot 1`] = `
-<div>
+<div
+  className="sc-bdVaJa bDWFJH"
+>
   <input
     onChange={[Function]}
     onKeyUp={[Function]}

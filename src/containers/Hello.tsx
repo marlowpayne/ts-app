@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect, Dispatch } from 'react-redux';
+import styled from 'styled-components';
+
 import { Hello as VisualComp } from '../visuals/Hello';
 import { TextField } from '../visuals/TextField';
 import { StoreState } from '../types';
@@ -10,6 +12,8 @@ export interface Props {
   onSubmit: Function;
   onEmptySubmit: Function;
 }
+
+const Wrapper = styled.div``;
 
 // exporting for testing purposes
 export const Visual = (props: Props) => {
@@ -22,10 +26,10 @@ export const Visual = (props: Props) => {
   };
 
   return (
-    <div>
+    <Wrapper>
       <VisualComp name={props.name} />
       <TextField {...{ onSubmit }} />
-    </div>
+    </Wrapper>
   );
 };
 

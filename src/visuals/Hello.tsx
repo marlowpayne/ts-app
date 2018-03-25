@@ -13,7 +13,9 @@ const Wrapper = styled.div`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 `;
 
-export const Hello = ({ name = 'World', enthusiasmLevel = 1 }: Props) => {
+const Greeting = styled.div``;
+
+export const Hello = ({ name = 'User', enthusiasmLevel = 1 }: Props) => {
   const getExclamationMarks = (numChars: number) => {
     return Array(numChars + 1).join('!');
   };
@@ -24,9 +26,9 @@ export const Hello = ({ name = 'World', enthusiasmLevel = 1 }: Props) => {
 
   return (
     <Wrapper>
-      <div className="greeting">
+      <Greeting className="greeting">
         Hello {name + getExclamationMarks(enthusiasmLevel)}
-      </div>
+      </Greeting>
     </Wrapper>
   );
 };

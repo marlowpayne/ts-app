@@ -9,12 +9,8 @@ const AppWrapper = styled.div`
   font-family: sans-serif;
 `;
 
-export class App extends React.Component {
-  render() {
-    return (
-      <AppWrapper className="App">
-        <Hello/>
-      </AppWrapper>
-    );
-  }
-}
+export const App = () => (
+  <AppWrapper className="App">
+    <Hello/>
+  </AppWrapper>
+);

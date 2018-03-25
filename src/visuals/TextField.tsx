@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const noop = () => null;
 
@@ -10,6 +11,8 @@ export interface Props {
 interface State {
   text: string;
 }
+
+const Wrapper = styled.div``;
 
 export class TextField extends React.Component<Props, State> {
   static propTypes = {
@@ -54,12 +57,12 @@ export class TextField extends React.Component<Props, State> {
 
   render() {
     return (
-      <div>
+      <Wrapper>
         <input type="text" value={this.state.text} onChange={this.onChange} onKeyUp={this.onKeyUp} />
         <button type="submit" onClick={this.onSubmit}>
           Change Name
         </button>
-      </div>
+      </Wrapper>
     );
   }
 }
